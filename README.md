@@ -57,9 +57,9 @@ and proxies that to ember-cli's live-reload server:
 
       "live-reload-port": 37000,
 
-      "proxyLiveReload": {
+      "proxy-live-reload": {
         "host": "localhost",
-        "portOffset": 100
+        "port-offset": 100
       }
     }
 

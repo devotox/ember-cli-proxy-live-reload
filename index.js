@@ -33,10 +33,11 @@ module.exports = {
     var self = this;
     var app = config.app;
     var options = config.options;
-    var proxyOptions = options.proxyLiveReload || {};
-    var portOffset = proxyOptions.portOffset || 100;
+    var proxyOptions = options["proxy-live-reload"] || { host: options.host };
+    var portOffset = proxyOptions["port-offset"] || 100;
+    
     if (!proxyOptions.host) {
-      console.error('EMBER CLI PROXY LIVE RELOAD - Must specify host');
+      console.error('!!!!!!!! EMBER CLI PROXY LIVE RELOAD - Must specify host !!!!!!!');
     }
 
     if (options.liveReload !== true) { return; }

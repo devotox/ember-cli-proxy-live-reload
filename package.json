@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-proxy-live-reload",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "Allows Ember CLI to proxy its livereload requests",
   "directories": {
     "doc": "doc",
