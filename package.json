@@ -1,0 +1,23 @@
+{
+  "name": "ember-cli-proxy-live-reload",
+  "version": "1.0.0",
+  "description": "Allows Ember CLI",
+  "directories": {
+    "doc": "doc",
+    "test": "tests"
+  },
+  "repository": "https://devotox/ember-cli-proxy-live-reload.git",
+  "engines": {
+    "node": ">= 0.10.0"
+  },
+  "author": "Devonte",
+  "license": "MIT",
+  "devDependencies": {
+  },
+  "keywords": [
+    "ember-addon",
+    "ember-ssl-proxy",
+    "ember-live-reload",
+    "ember-proxy-live-reload"
+  ]
+}
