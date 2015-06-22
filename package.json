@@ -12,8 +12,6 @@
   },
   "author": "Devonte",
   "license": "MIT",
-  "devDependencies": {
-  },
   "keywords": [
     "ember-addon",
     "ember-ssl-proxy",
