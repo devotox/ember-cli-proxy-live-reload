@@ -35,12 +35,12 @@ module.exports = {
     var options = config.options;
     var proxyOptions = options["proxy-live-reload"] || { host: options.host };
     var portOffset = proxyOptions["port-offset"] || 100;
+
+    if (options.liveReload !== true) { return; }
     
     if (!proxyOptions.host) {
       console.error('!!!!!!!! EMBER CLI PROXY LIVE RELOAD - Must specify host !!!!!!!');
     }
-
-    if (options.liveReload !== true) { return; }
 
     process.env.EMBER_CLI_INJECT_LIVE_RELOAD_PORT = options.liveReloadPort;
     process.env.EMBER_CLI_INJECT_LIVE_RELOAD_BASEURL = options.baseURL; // default is '/'
