@@ -10,7 +10,7 @@ Our standard nginx config proxies the script to ember-cli.
 
 When that script is requested, ember-cli will serve up the script in the `dynamicScript` method below, which in turn loads the livereload.js script.
 
-Some nginx config proxies that to ember-cli's live-reload server running in this project on port 37500:
+Some nginx config proxies that to ember-cli's live-reload server running in this project on port 37000:
 
     server {
       listen 80;
@@ -19,9 +19,13 @@ Some nginx config proxies that to ember-cli's live-reload server running in this
       server_name something.yourapphost.dev;
 
       # ...
+      
 
+      location ~ ^/ember-cli-live-reload.js {
+          proxy_pass http://localhost:4200 # port where your ember server is running
+      }
       location ~ ^/livereload.js {
-        proxy_pass http://localhost:37500;
+        proxy_pass http://localhost:37000;
       }
 
       # ...
@@ -33,13 +37,30 @@ a port 100 greater than 37500 (37600). nginx config terminates SLL
 and proxies that to ember-cli's live-reload server:
 
     server {
-      listen 37600 ssl;
+      listen 37100 ssl;
       server_name something.yourapphost.dev;
 
       location / {
-        proxy_pass http://localhost:37500;
+        proxy_pass http://localhost:37000;
         proxy_http_version 1.1;
         proxy_set_header Upgrade $http_upgrade;
         proxy_set_header Connection "upgrade";
       }
     }
+
+## Ember CLI options
+
+    {
+      "port": 5000, 
+
+      "live-reload": true,
+
+      "live-reload-port": 37000,
+
+      "proxyLiveReload": {
+        "host": "localhost",
+        "portOffset": 100
+      }
+    }
+
+

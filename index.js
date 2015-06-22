@@ -18,9 +18,7 @@ module.exports = {
     var scriptSrc = process.env.EMBER_CLI_PROXY_LIVE_RELOAD_BASE_URL;
     scriptSrc += 'livereload.js?snipver=1&host=';
     scriptSrc += process.env.EMBER_CLI_PROXY_LIVE_RELOAD_HOST.replace('https://', '').replace('http://', '');
-
-
-      console.log(scriptSrc, "################################################################################################################");
+    scriptSrc += '&port=' + process.env.EMBER_CLI_PROXY_LIVE_RELOAD_PROXY_PORT;
 
     return "(function() {\n " +
            "var src = '" + scriptSrc + "';\n " +
@@ -52,7 +50,7 @@ module.exports = {
 
     var liveReloadUrl = options.baseURL + 'ember-cli-live-reload.js';
     app.use(liveReloadUrl, function(request, response, next) {
-      response.contentType('text/javascript');
+      response.contentType('application/javascript');
       response.send(self.dynamicScript());
     });
   }
