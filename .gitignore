@@ -1,0 +1,30 @@
+
+# dependencies
+node_modules
+bower_components
+
+# misc
+npm-debug.log
+testem.log
+
+thumbs.db
+.DS_Store
+*.komodoproject
+.komodotools
+*.sublime*
+
+# Others
+lib-cov
+*.seed
+*.log
+*.csv
+*.dat
+*.out
+*.pid
+*.gz
+
+pids
+logs
+results
+build
+
