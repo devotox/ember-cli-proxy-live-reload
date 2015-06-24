@@ -1,12 +1,12 @@
 {
   "name": "ember-cli-proxy-live-reload",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Allows Ember CLI to proxy its livereload requests",
   "directories": {
     "doc": "doc",
     "test": "tests"
   },
-  "repository": "https://devotox/ember-cli-proxy-live-reload.git",
+  "repository": "https://github.com/devotox/ember-cli-proxy-live-reload.git",
   "engines": {
     "node": ">= 0.10.0"
   },

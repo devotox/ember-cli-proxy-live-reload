@@ -5,8 +5,8 @@ module.exports = {
   name: 'ember-cli-proxy-live-reload',
 
   contentFor: function(type) {
-    var liveReloadPort = process.env.EMBER_CLI_INJECT_LIVE_RELOAD_PORT;
     var baseURL = process.env.EMBER_CLI_INJECT_LIVE_RELOAD_BASEURL;
+    var liveReloadPort = process.env.EMBER_CLI_INJECT_LIVE_RELOAD_PORT;
 
     if (liveReloadPort && type === 'head') {
       return '<script src="' + baseURL + 'ember-cli-live-reload.js" type="text/javascript"></script>';
