@@ -32,13 +32,13 @@ Some nginx config proxies that to ember-cli's live-reload server running in this
     }
 
 livereload.js is requested with query params that cause it to make a
-secure websocket connection to cloudfront-standin-app.yapp.dev and on
-a port 100 greater than 37500 (37600). nginx config terminates SLL
+secure websocket connection to your localhost live_reload_server and on
+a port 100 greater than 37500 (37600). nginx config terminates SSL
 and proxies that to ember-cli's live-reload server:
 
     server {
       listen 37100 ssl;
-      server_name something.yourapphost.dev;
+      server_name live_reload_server;
 
       location / {
         proxy_pass http://localhost:37000;
