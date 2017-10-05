@@ -1,5 +1,7 @@
 # ember-cli-proxy-live-reload
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/devotox/ember-cli-proxy-live-reload.svg)](https://greenkeeper.io/)
+
 When using nginx to terminate SSL and reverse proxy appropriate requests to ember-cli, ember-cli's live-reload will not work out of the box.
 
 This addon implements a proxy configuration for livereload.js and provides a generator for the corresponding nginx conf.
