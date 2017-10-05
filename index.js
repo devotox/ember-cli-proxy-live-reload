@@ -37,7 +37,7 @@ module.exports = {
     var portOffset = proxyOptions["port-offset"] || 100;
 
     if (options.liveReload !== true) { return; }
-    
+
     if (!proxyOptions.host) {
       console.error('!!!!!!!! EMBER CLI PROXY LIVE RELOAD - Must specify host !!!!!!!');
     }
