@@ -2,7 +2,7 @@
 
 [![Ember Observer Score](http://emberobserver.com/badges/ember-cli-proxy-live-reload.svg)](http://emberobserver.com/addons/ember-cli-proxy-live-reload)
 [![Build Status](https://travis-ci.org/devotox/ember-cli-proxy-live-reload.svg)](http://travis-ci.org/devotox/ember-cli-proxy-live-reload)
-[![Coverage Status](https://coveralls.io/repos/github/devotox/mber-cli-proxy-live-reload/badge.svg)](https://coveralls.io/github/devotox/mber-cli-proxy-live-reload)
+[![Coverage Status](https://coveralls.io/repos/github/devotox/ember-cli-proxy-live-reload/badge.svg)](https://coveralls.io/github/devotox/ember-cli-proxy-live-reload)
 [![NPM Version](https://badge.fury.io/js/ember-cli-proxy-live-reload.svg)](http://badge.fury.io/js/ember-cli-proxy-live-reload)
 [![NPM Downloads](https://img.shields.io/npm/dm/ember-cli-proxy-live-reload.svg)](https://www.npmjs.org/package/ember-cli-proxy-live-reload)
 [![Greenkeeper badge](https://badges.greenkeeper.io/devotox/ember-cli-proxy-live-reload.svg)](https://greenkeeper.io/)

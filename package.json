@@ -1,17 +1,17 @@
 {
   "name": "ember-cli-proxy-live-reload",
   "version": "2.0.2",
-  "description": "The default blueprint for ember-cli addons.",
+  "description": "Proxy Live reload using Nginx",
   "keywords": [
     "ember-addon"
   ],
   "license": "MIT",
-  "author": "",
+  "author": "Devonte",
   "directories": {
     "doc": "doc",
     "test": "tests"
   },
-  "repository": "",
+  "repository": "https://github.com/devotox/ember-cli-proxy-live-reload",
   "scripts": {
     "build": "ember build",
     "start": "ember server",
