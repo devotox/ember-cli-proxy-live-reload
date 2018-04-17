@@ -5,17 +5,17 @@ module.exports = {
   name: 'ember-cli-proxy-live-reload',
 
   contentFor: function(type) {
-    var baseURL = process.env.EMBER_CLI_INJECT_LIVE_RELOAD_BASEURL;
-    var liveReloadPort = process.env.EMBER_CLI_INJECT_LIVE_RELOAD_PORT;
+    let baseURL = process.env.EMBER_CLI_INJECT_LIVE_RELOAD_BASEURL;
+    let liveReloadPort = process.env.EMBER_CLI_INJECT_LIVE_RELOAD_PORT;
 
     if (liveReloadPort && type === 'head') {
       return '<script src="' + baseURL + 'ember-cli-live-reload.js" type="text/javascript"></script>';
     }
   },
 
-  dynamicScript: function(request) {
-    var liveReloadPort = process.env.EMBER_CLI_INJECT_LIVE_RELOAD_PORT;
-    var scriptSrc = process.env.EMBER_CLI_PROXY_LIVE_RELOAD_BASE_URL;
+  dynamicScript: function() {
+    // let liveReloadPort = process.env.EMBER_CLI_INJECT_LIVE_RELOAD_PORT;
+    let scriptSrc = process.env.EMBER_CLI_PROXY_LIVE_RELOAD_BASE_URL;
     scriptSrc += 'livereload.js?snipver=1&host=';
     scriptSrc += process.env.EMBER_CLI_PROXY_LIVE_RELOAD_HOST.replace('https://', '').replace('http://', '');
     scriptSrc += '&port=' + process.env.EMBER_CLI_PROXY_LIVE_RELOAD_PROXY_PORT;
@@ -30,16 +30,16 @@ module.exports = {
   },
 
   serverMiddleware: function(config) {
-    var self = this;
-    var app = config.app;
-    var options = config.options;
-    var proxyOptions = options["proxy-live-reload"] || { host: options.host };
-    var portOffset = proxyOptions["port-offset"] || 100;
+    let self = this;
+    let app = config.app;
+    let options = config.options;
+    let proxyOptions = options["proxy-live-reload"] || { host: options.host };
+    let portOffset = proxyOptions["port-offset"] || 100;
 
     if (options.liveReload !== true) { return; }
 
     if (!proxyOptions.host) {
-      console.error('!!!!!!!! EMBER CLI PROXY LIVE RELOAD - Must specify host !!!!!!!');
+      console.error('!!!!!!!! EMBER CLI PROXY LIVE RELOAD - Must specify host !!!!!!!'); // eslint-disable-line
     }
 
     process.env.EMBER_CLI_INJECT_LIVE_RELOAD_PORT = options.liveReloadPort;
@@ -49,10 +49,11 @@ module.exports = {
 
     process.env.EMBER_CLI_PROXY_LIVE_RELOAD_BASE_URL = options.baseURL;
 
-    var liveReloadUrl = options.baseURL + 'ember-cli-live-reload.js';
+    let liveReloadUrl = options.baseURL + 'ember-cli-live-reload.js';
     app.use(liveReloadUrl, function(request, response, next) {
       response.contentType('application/javascript');
       response.send(self.dynamicScript());
+      next();
     });
   }
 };

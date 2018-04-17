@@ -1,21 +1,27 @@
-# ember-cli-proxy-live-reload
-
 [![Ember Observer Score](http://emberobserver.com/badges/ember-cli-proxy-live-reload.svg)](http://emberobserver.com/addons/ember-cli-proxy-live-reload)
 [![Build Status](https://travis-ci.org/devotox/ember-cli-proxy-live-reload.svg)](http://travis-ci.org/devotox/ember-cli-proxy-live-reload)
-[![Coverage Status](https://coveralls.io/repos/github/devotox/ember-cli-proxy-live-reload/badge.svg)](https://coveralls.io/github/devotox/ember-cli-proxy-live-reload)
+[![Coverage Status](https://codecov.io/gh/devotox/ember-cli-proxy-live-reload/branch/master/graph/badge.svg)](https://codecov.io/gh/devotox/ember-cli-proxy-live-reload)
 [![NPM Version](https://badge.fury.io/js/ember-cli-proxy-live-reload.svg)](http://badge.fury.io/js/ember-cli-proxy-live-reload)
 [![NPM Downloads](https://img.shields.io/npm/dm/ember-cli-proxy-live-reload.svg)](https://www.npmjs.org/package/ember-cli-proxy-live-reload)
-[![Greenkeeper badge](https://badges.greenkeeper.io/devotox/ember-cli-proxy-live-reload.svg)](https://greenkeeper.io/)
+[![Dependency Status](https://david-dm.org/poetic/ember-cli-proxy-live-reload.svg)](https://david-dm.org/poetic/ember-cli-proxy-live-reload)
+[![DevDependency Status](https://david-dm.org/poetic/ember-cli-proxy-live-reload/dev-status.svg)](https://david-dm.org/poetic/ember-cli-proxy-live-reload#info=devDependencies)
+[![Greenkeeper](https://badges.greenkeeper.io/devotox/ember-cli-proxy-live-reload.svg)](https://greenkeeper.io/)
 
-## Description
-When using nginx to terminate SSL and reverse proxy appropriate requests to ember-cli, ember-cli's live-reload will not work out of the box.
+ember-cli-proxy-live-reload
+==============================================================================
 
-This addon implements a proxy configuration for livereload.js and provides a generator for the corresponding nginx conf.
+A way to inject all meta tags and extra scripts into head tags that can be preprocessed with handlebars
 
-## Installation
-* `ember install ember-cli-proxy-live-reload`
+Installation
+------------------------------------------------------------------------------
 
-## Usage
+```
+ember install ember-cli-proxy-live-reload
+```
+
+
+Usage
+------------------------------------------------------------------------------
 
 ### nginx conf
 
@@ -61,14 +67,10 @@ and proxies that to ember-cli's live-reload server:
       }
     }
 
-## Ember CLI options
+### Ember CLI options
 
     {
-<<<<<<< HEAD
-      "port": 5000,
-=======
       "port": 4200,
->>>>>>> 6deb690b8f9ecf8538d5b172dd2a9ef84d90bef8
 
       "live-reload": true,
 
@@ -80,4 +82,34 @@ and proxies that to ember-cli's live-reload server:
       }
     }
 
+Contributing
+------------------------------------------------------------------------------
 
+### Installation
+
+* `git clone <repository-url>`
+* `cd ember-cli-proxy-live-reload`
+* `yarn install`
+
+### Linting
+
+* `yarn lint:js`
+* `yarn lint:js --fix`
+
+### Running tests
+
+* `ember test` – Runs the test suite on the current Ember version
+* `ember test --server` – Runs the test suite in "watch mode"
+* `ember try:each` – Runs the test suite against multiple Ember versions
+
+### Running the dummy application
+
+* `ember serve`
+* Visit the dummy application at [http://localhost:4200](http://localhost:4200).
+
+For more information on using ember-cli, visit [https://ember-cli.com/](https://ember-cli.com/).
+
+License
+------------------------------------------------------------------------------
+
+This project is licensed under the [MIT License](LICENSE.md).
