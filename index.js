@@ -1,8 +1,10 @@
 /* jshint node: true */
 'use strict';
 
+const { name } = require('./package');
+
 module.exports = {
-  name: 'ember-cli-proxy-live-reload',
+  name,
 
   contentFor: function(type) {
     let baseURL = process.env.EMBER_CLI_INJECT_LIVE_RELOAD_BASEURL;
