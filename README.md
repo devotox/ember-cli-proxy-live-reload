@@ -3,8 +3,8 @@
 [![Coverage Status](https://codecov.io/gh/devotox/ember-cli-proxy-live-reload/branch/master/graph/badge.svg)](https://codecov.io/gh/devotox/ember-cli-proxy-live-reload)
 [![NPM Version](https://badge.fury.io/js/ember-cli-proxy-live-reload.svg)](http://badge.fury.io/js/ember-cli-proxy-live-reload)
 [![NPM Downloads](https://img.shields.io/npm/dm/ember-cli-proxy-live-reload.svg)](https://www.npmjs.org/package/ember-cli-proxy-live-reload)
-[![Dependency Status](https://david-dm.org/poetic/ember-cli-proxy-live-reload.svg)](https://david-dm.org/poetic/ember-cli-proxy-live-reload)
-[![DevDependency Status](https://david-dm.org/poetic/ember-cli-proxy-live-reload/dev-status.svg)](https://david-dm.org/poetic/ember-cli-proxy-live-reload#info=devDependencies)
+[![Dependency Status](https://david-dm.org/devotox/ember-cli-proxy-live-reload.svg)](https://david-dm.org/devotox/ember-cli-proxy-live-reload)
+[![DevDependency Status](https://david-dm.org/devotox/ember-cli-proxy-live-reload/dev-status.svg)](https://david-dm.org/devotox/ember-cli-proxy-live-reload#info=devDependencies)
 [![Greenkeeper](https://badges.greenkeeper.io/devotox/ember-cli-proxy-live-reload.svg)](https://greenkeeper.io/)
 
 ember-cli-proxy-live-reload
